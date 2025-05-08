@@ -1,0 +1,113 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400");
+@import url("https://use.fontawesome.com/realeses/v6.4.2/css/all.css");
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #ccc;
+}
+ul {
+    font-family: "Roboto Condensed", "sans-serif";
+    display: flex;
+}
+li {
+    list-style: none;
+    margin: 0 5px;
+}
+.fa-brands {
+    color: #262626;
+    font-size: 40px;
+    line-height: 80px;
+    transition: .5s;
+    padding-left: 14px;
+}
+a {
+    width: 210px;
+    height: 80px;
+    background: #fff;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    padding-left: 20px;
+    transform: rotate(-30deg) skew(25deg);
+    translate(0, 0);
+    box-shadow: -20px 20px 10px #00000080;
+}
+a span {
+    color: #262626;
+    padding: 8px;
+    margin: 0;
+    position: absolute;
+    top: 30px;
+    letter-spacing: 4px;
+    transition: .5s;
+}
+a::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 20px;
+    background: #b1b1b1;
+    top: 10px;
+    left: -20px;
+    transform:rotate(0deg) skewY(-45deg);
+}
+a::after {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    background: #b1b1b1;
+    bottom: -20px;
+    left: -10px;
+    transform:rotate(0deg) skewX(-45deg);
+}
+a:hover {
+    transform: rotate(-30deg) skew(25deg);
+    translate(20px, -15px);
+    box-shadow: -50px 50px 50px #00000080;
+}
+li:hover .fa-brands,
+li:hover span {
+    color: #fff;
+}
+li:hover:nth-child(1) {
+    & a {
+        background: #0A66C2;
+        
+        &::before {
+            background: #00366b
+        }
+        &::after {
+            background: #0052a5;
+        }
+    }
+}
+li:hover:nth-child(2) {
+    & a {
+        background: #383838;
+        color: white;
+
+        &::before {
+            background: #000000;
+        }
+        &::after {
+            background: #272727;
+        }   
+    }
+}
+li:hover:nth-child(3) {
+    & a {
+        background-image: linear-gradient(to right, #85007a, #F44E55, #FFD453 );
+
+        &::before {
+            background: #690061;
+        }
+        &::after {
+            background-image: linear-gradient(to right, #8b0080, #e7474f, #e2bc48);
+        }   
+    }
+}
